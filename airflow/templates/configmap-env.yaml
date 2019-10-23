@@ -9,7 +9,7 @@ metadata:
     heritage: {{ .Release.Service }}
 data:
   ## Force UTC timezone
-  TZ: Etc/UTC
+  TZ: Asia/Shanghai
   ## Postgres DB configuration
   POSTGRES_HOST: "{{ template "airflow.postgresql.fullname" . }}"
   POSTGRES_PORT: "{{ .Values.postgresql.service.port }}"
