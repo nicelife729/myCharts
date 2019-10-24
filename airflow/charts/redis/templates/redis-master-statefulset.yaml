@@ -92,6 +92,8 @@ spec:
           redis-server "${ARGS[@]}"
           {{- end }}
         env:
+        - name: "TZ"
+          value: "Asia/Shanghai"
         - name: REDIS_REPLICATION_MODE
           value: master
         {{- if .Values.usePassword }}
